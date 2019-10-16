@@ -31,14 +31,14 @@ def short_gen_pile():
 
 def long_pile_output():
     new_pile = pile[:9]
-    while pile!=desired_pile:
+    while new_pile!=desired_pile:
         for i in range(9):
-            if pile[i]!=i+1:
-                if pile[i]>i+1:
-                    pile[i] -=1
+            if new_pile[i]!=i+1:
+                if new_pile[i]>i+1:
+                    new_pile[i] -=1
                 else:
-                    pile[i] +=1
-        print(pile)
+                    new_pile[i] +=1
+        print(new_pile)
 #prints selected pile sizes
 print(f"Random pile: {pile}")
 
