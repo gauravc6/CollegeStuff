@@ -13,6 +13,13 @@ class HashSet1
     set.add("is");
     set.add("boring.");
 
+    Set<Integer> int_set = new HashSet<Integer>();
+    int_set.add(1);
+    int_set.add(2);
+    int_set.add(2);
+    int_set.add(3);
+
     System.out.println(set);
+    System.out.println(int_set);
   }
 }
