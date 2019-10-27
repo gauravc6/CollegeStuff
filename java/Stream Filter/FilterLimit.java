@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.stream.*;
-public class streamEx2
+public class FilterLimit
 {
   public static void main(String args[])
   {

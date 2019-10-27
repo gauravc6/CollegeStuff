@@ -1,4 +1,4 @@
-public class genericAdd {
+public class GenericAdd {
 
     static <T> T add(T x, T y){
       Double sum = 0.0;

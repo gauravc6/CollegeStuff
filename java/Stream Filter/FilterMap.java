@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.stream.*;
-class streamEx1
+class FilterMap
 {
   public static void main(String args[])
   {
@@ -9,7 +9,7 @@ class streamEx1
     List<Integer> square = number.stream().map(x -> x*x*x).collect(Collectors.toList());
     System.out.println(square);
 
-    List<String> names = Arrays.asList("Kartik","is","not","a","kind","person");
+    List<String> names = Arrays.asList("Dylan","is","not","a","kind","person");
 
     List<String> filtered = names.stream().filter(x -> x.endsWith("n")).collect(Collectors.toList());
     System.out.println(filtered);

@@ -15,7 +15,7 @@ class Product
   }
 }
 
-public class productStream
+public class ProductStream
 {
   public static void main(String args[])
   {

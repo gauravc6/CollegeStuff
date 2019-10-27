@@ -16,7 +16,7 @@ class gen<U, V>
     }
 }
 
-class generics1
+class GenericsObject
 {
   public static void main(String args[])
   {

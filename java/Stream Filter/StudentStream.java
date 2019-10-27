@@ -27,7 +27,7 @@ class Student
   }
 }
 
-class studentStream
+class StudentStream
 {
   public static void main(String args[])
   {

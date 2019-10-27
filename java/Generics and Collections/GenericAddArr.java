@@ -1,4 +1,4 @@
-public class genericAddArr {
+public class GenericAddArr {
 
     static <T> T sum(T[] arr){
 
