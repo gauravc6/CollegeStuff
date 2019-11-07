@@ -1,3 +1,5 @@
 *.class
+*.o
+*.exe
 *.txt
 dumper.sh
