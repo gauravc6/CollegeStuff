@@ -7,7 +7,7 @@ public class Ex2{
       System.out.println("Trying connection with DB...");
       conn = DriverManager.getConnection("jdbc:mysql://localhost/Registration", "root", "iseeyou");
       stmt = conn.createStatement();
-      String exec = "CREATE TABLE Student (reg INTEGER not NULL, first VARCHAR(255), last VARCHAR(255), branch VARCHAR(3), year INTEGER, PRIMARY KEY (id))"
+      String exec = "CREATE TABLE Student (reg INTEGER not NULL, first VARCHAR(255), last VARCHAR(255), branch VARCHAR(3), year INTEGER, PRIMARY KEY (id))";
       stmt.executeUpdate(exec);
       System.out.println("New table created.");
     }

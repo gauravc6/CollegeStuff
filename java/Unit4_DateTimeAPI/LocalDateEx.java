@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class LocalDate
+public class LocalDateEx
 {
   public static void main(String args[])
   {

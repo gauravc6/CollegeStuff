@@ -11,11 +11,11 @@ public class Throw
   }
   public static void main(String args[])
   {
-    try(checkin(11));
+    try{checkin(11);}
+    catch(Exception e)
+    {
+      out.println("Error found: "+e);
+    }
+    out.println("Continue code flow.");
   }
-  catch(Exception e)
-  {
-    out.println("Error found: "+e);
-  }
-  out.println("Continue code flow.");
 }

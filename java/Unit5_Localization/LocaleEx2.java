@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LocalEx2{
+public class LocaleEx2{
   public static void main(String[] args) {
     List<Locale> locales = new ArrayList<Locale>();
     locales.add(new Locale("en","US"));

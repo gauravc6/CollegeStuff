@@ -24,7 +24,7 @@ class TreeMapEx{
       int key = x.getKey();
       Student s = x.getValue();
       System.out.println(key+"Student: ");
-      System.out.println(b.reg+" "+b.name);
+      System.out.println(s.reg+" "+s.name);
     }
   }
 }

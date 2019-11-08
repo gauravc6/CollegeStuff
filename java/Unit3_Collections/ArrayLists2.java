@@ -23,19 +23,22 @@ class ArrayList2{
     System.out.println();
 
     System.out.println("Sorted new list: ");
-    System.out.println(Collections.sort(names_copy););
+    Collections.sort(names_copy);
+    System.out.println(names_copy);
     System.out.println();
 
     System.out.println("Reversed list: ");
-    System.out.println(Collections.reverse(names_copy));
+    Collections.reverse(names_copy);
+    System.out.println(names_copy);
     System.out.println();
 
     System.out.println("Shuffled list: ");
-    System.out.println(Collections.shuffle(names_copy));
+    Collections.shuffle(names_copy);
+    System.out.println(names_copy);
     System.out.println();
 
     System.out.println("Checking occurance of Alienware: ");
-    System.out.println(Collections.freqeuncy(names_copy,"Alienware"));
+    System.out.println(Collections.frequency(names_copy,"Alienware"));
     System.out.println();
 
   }
