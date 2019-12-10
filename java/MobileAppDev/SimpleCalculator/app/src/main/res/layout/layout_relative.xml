@@ -65,32 +65,42 @@
             android:inputType="number"
             android:textSize="30dp" />
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/resText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Result = 0.0"
+            android:textSize="30dp" />
 
         <Button
+            android:onClick="addNum"
+            android:id="@+id/addbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary"
             android:text="+" />
 
         <Button
+            android:onClick="subNum"
+            android:id="@+id/subbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="231dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary"
             android:text="-" />
     </RelativeLayout>
@@ -102,24 +112,28 @@
         android:layout_marginTop="200dp">
 
         <Button
+            android:onClick="multNum"
+            android:id="@+id/multbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary"
             android:text="*" />
 
         <Button
+            android:onClick="divNum"
+            android:id="@+id/divbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="231dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:background="@color/colorPrimary"
             android:text="/" />
     </RelativeLayout>
@@ -129,10 +143,12 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="300dp">
         <Button
+            android:onClick="modNum"
+            android:id="@+id/modbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_marginLeft="150dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:text="%"
             android:background="@color/colorPrimary"/>
     </RelativeLayout>
@@ -142,10 +158,12 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="400dp">
         <Button
+            android:onClick="resetField"
+            android:id="@+id/resetbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
             android:layout_marginLeft="150dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:text="Reset"
             android:background="@color/colorAccent"/>
     </RelativeLayout>

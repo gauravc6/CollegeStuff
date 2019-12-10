@@ -72,9 +72,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top">
 
+            <TextView
+                android:id="@+id/resText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Result = 0.0"
+                android:textSize="30dp" />
+
         <TableRow android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/addbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="60dp"
@@ -82,6 +91,7 @@
                 android:text="+"
                 android:background="@color/colorPrimary"/>
             <Button
+                android:id="@+id/subbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="60dp"
@@ -99,6 +109,8 @@
         <TableRow android:layout_height="wrap_content">
 
             <Button
+                android:onClick="multNum"
+                android:id="@+id/multbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="60dp"
@@ -106,6 +118,8 @@
                 android:text="*"
                 android:background="@color/colorPrimary"/>
             <Button
+                android:onClick="divNum"
+                android:id="@+id/divbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="60dp"
@@ -123,6 +137,8 @@
         <TableRow android:layout_height="wrap_content">
 
             <Button
+                android:onClick="modNum"
+                android:id="@+id/modbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="150dp"
@@ -139,6 +155,8 @@
         <TableRow android:layout_height="wrap_content">
 
             <Button
+                android:onClick="resetField"
+                android:id="@+id/resetbutton"
                 android:layout_width="111dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="150dp"
