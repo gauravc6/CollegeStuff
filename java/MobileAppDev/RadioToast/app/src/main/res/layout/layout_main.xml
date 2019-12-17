@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="Select your preference"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="521dp"
+        android:text="Teachers"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="522dp"
+        android:text="Courses"
+        android:textSize="25dp" />
+
+    <RadioGroup
+        android:id="@+id/courseGroup"
+        android:layout_width="201dp"
+        android:layout_height="252dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="261dp">
+
+        <RadioButton
+            android:id="@+id/madRadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile App Development"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/dbmsRadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="DBMS"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/compRadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Computer Networks"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/operatingRadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Operating System"
+            android:textSize="20dp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/teacherGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="245dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="267dp">
+
+        <RadioButton
+            android:id="@+id/teacher1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. Sandip Mal"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/teacher2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. Dhruv Sharma"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/teacher3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. Abhishek Verma"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/teacher4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. Akshara M."
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="243dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="140dp"
+        android:text="Clear" />
+
+
+</RelativeLayout>
