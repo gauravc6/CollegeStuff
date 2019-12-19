@@ -73,7 +73,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:onClick="addNum"
             android:id="@+id/addbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"
@@ -82,7 +81,6 @@
             android:text="+"
             android:background="@color/colorPrimary"/>
         <Button
-            android:onClick="subNum"
             android:id="@+id/subbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"
@@ -97,7 +95,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:onClick="multNum"
             android:id="@+id/multbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"
@@ -106,7 +103,6 @@
             android:text="*"
             android:background="@color/colorPrimary"/>
         <Button
-            android:onClick="divNum"
             android:id="@+id/divbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"
@@ -120,7 +116,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:onClick="modNum"
             android:id="@+id/modbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"
@@ -135,7 +130,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:onClick="resetField"
             android:id="@+id/resetbutton"
             android:layout_width="111dp"
             android:layout_height="match_parent"

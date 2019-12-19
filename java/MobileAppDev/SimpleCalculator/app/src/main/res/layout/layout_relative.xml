@@ -79,7 +79,6 @@
             android:textSize="30dp" />
 
         <Button
-            android:onClick="addNum"
             android:id="@+id/addbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
@@ -92,7 +91,6 @@
             android:text="+" />
 
         <Button
-            android:onClick="subNum"
             android:id="@+id/subbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
@@ -112,7 +110,6 @@
         android:layout_marginTop="200dp">
 
         <Button
-            android:onClick="multNum"
             android:id="@+id/multbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
@@ -125,7 +122,6 @@
             android:text="*" />
 
         <Button
-            android:onClick="divNum"
             android:id="@+id/divbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
@@ -143,7 +139,6 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="300dp">
         <Button
-            android:onClick="modNum"
             android:id="@+id/modbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
@@ -158,7 +153,6 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="400dp">
         <Button
-            android:onClick="resetField"
             android:id="@+id/resetbutton"
             android:layout_width="111dp"
             android:layout_height="50dp"
