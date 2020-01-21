@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    // Title
+    <TextView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Movie Rating"
+        android:textAlignment="center"
+        android:textSize="50sp" />
+
+    //Movie A
+    <TextView
+        android:id="@+id/movieAView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="The Matrix"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/movieABar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="160dp" />
+
+    // Movie B
+
+    <TextView
+        android:id="@+id/movieARating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="170dp"
+        android:layout_toEndOf="@+id/movieABar"
+        android:text="0.0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/movieBView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="220dp"
+        android:text="Edge of Tomorrow"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/movieBBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="250dp" />
+
+    <TextView
+        android:id="@+id/movieBRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="260dp"
+        android:layout_toEndOf="@+id/movieBBar"
+        android:textSize="20sp"
+        android:text="0.0"/>
+
+    // Movie C
+    <TextView
+        android:id="@+id/movieCView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="310dp"
+        android:text="Die Hard"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/movieCBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="340dp" />
+
+    <TextView
+        android:id="@+id/movieCRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="350dp"
+        android:layout_toEndOf="@+id/movieABar"
+        android:text="0.0"
+        android:textSize="20sp" />
+
+    // Result
+    <TextView
+        android:id="@+id/resView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="455dp"
+        android:layout_marginEnd="0dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp" />
+</RelativeLayout>
