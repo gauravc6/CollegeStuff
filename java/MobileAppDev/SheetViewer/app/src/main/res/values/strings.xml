@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SheetViewer</string>
+    <string name="retrieve_data">Retrieve Data</string>
+</resources>
