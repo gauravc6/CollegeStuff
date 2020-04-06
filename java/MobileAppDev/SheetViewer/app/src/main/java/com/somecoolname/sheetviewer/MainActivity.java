@@ -3,7 +3,6 @@ package com.somecoolname.sheetviewer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     final Sheets sheetsService = new Sheets.Builder(transport, factory, null).setApplicationName("SheetsApp").build();
 
     String range = "Sheet1";
-    String recievedData = "";
+    String receivedData = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,17 +56,16 @@ public class MainActivity extends AppCompatActivity {
                                 public void run() {
                                     for (List<Object> objectList: result.getValues()) {
                                         for (Object o: objectList) {
-                                            recievedData += Html.fromHtml(o.toString() + "\t\t\t");
+                                            receivedData += o.toString() + "\t\t\t";
                                         }
-                                        recievedData += "\n\n";
+                                        receivedData += "\n\n";
                                     }
                                     Toast.makeText(MainActivity.this, "Data Fetched!",Toast.LENGTH_LONG).show();
-                                    resultView.setText(recievedData);
+                                    resultView.setText(receivedData);
                                 }
                             });
                             Log.d("API", "Data Fetched: " + result.getRange());
-                        }
-                        catch (IOException e) {
+                        } catch (IOException e) {
                             Toast.makeText(MainActivity.this,"Couldn't fetch sheet data!",Toast.LENGTH_LONG).show();
                             Log.d("API", "Fetching failed: " + e.getLocalizedMessage());
                         }
