@@ -7,11 +7,7 @@ public class Handshake {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.close();
-        
-        int handshakes = 0;
-        for (int i=0; i<n; i++) {
-            handshakes += i;
-        }
-        System.out.println(handshakes);
+    
+        System.out.println(n*(n-1)/2);
     }
 }
