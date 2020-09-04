@@ -6,7 +6,7 @@ function validateName(name) {
         alert("Name is a required field.");
     else
         alert("Name should only contain letters.");
-    ele.focus();
+    name.focus();
     return false;
 }
 
@@ -18,7 +18,7 @@ function validateMobile(number) {
         alert("Mobile number is a required field.");
     else
         alert("Invalid Mobile number. Enter a valid Mobile number.");
-    ele.focus();
+    number.focus();
     return false;
 }
 
@@ -59,7 +59,6 @@ function validateGender(gender) {
         return true;
     else
         alert("Gender is a required field.")
-    gender.focus();
     return false;
 }
 
@@ -69,6 +68,7 @@ function validateRole(role) {
     else
         alert("Prefered role is a require field.")
     role.focus();
+    return false;
 }
 
 function validateForm() {
@@ -80,17 +80,31 @@ function validateForm() {
     var password = form.password;
     var confirmPassword = form.confirmpassword;
     var role = form.role;
-    var lang = form.language;
 
-    if (validateLetterString(name) && validateEmail(email)&& validatePassword(password)
+    if (validateName(name) && validateEmail(email)&& validatePassword(password)
         && matchPass(password, confirmPassword) && validateGender(gender)
-        && validateNumberString(mobileNumber) && validateRole(role))
+        && validateMobile(mobileNumber) && validateRole(role))
         return true;
+    else 
+        return false;
 }
 
 $(document).ready(function () {
 
     var prev = null;
+
+    $("#submit-btn").click(function() {
+        if (validateForm()) {
+            $("#form").append('<h3 id="success">Form has been validated</h3>');
+            $("#success").css("background-color", "turquoise");
+        } else {
+            $("#success").remove();
+        }
+    });
+
+    $("#reset-btn").click(function() {
+        $("#success").remove();
+    });
 
     $(".lang-check").click(function () {
         $(".lang-check").each(function(){

@@ -49,13 +49,8 @@ body {
 
 td {
     padding: 1em;
-    text-align: center;
 }
 
-.langspan {
-    display: none;
-}
-
-.rolespan {
+.fade {
     display: none;
 }
