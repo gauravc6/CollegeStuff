@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="lang-div">
+            <h1><span id="cspan" class="langspan">C</span><br>
+                <span id="cppspan" class="langspan">C++</span><br>
+                <span id="javaspan" class="langspan">Java</span><br>
+                <span id="jsspan" class="langspan">JavaScript</span>
+            </h1>
+        </div>
+
+        <div id="form-div">
+            <h2 id="form-title">Profile form</h2>
+            <form name="regform" action="POST">
+                <table id="form-table">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" name="name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="password" name="password" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirmpassword">Confirm Password</label></td>
+                        <td><input type="password" name="confirmpassword" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td> <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="mobilenumber">Mobile number</label></td>
+                        <td><input type="text" name="mobilenumber" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="language" id="lang">Language</label></td>
+                        <td><input type="checkbox" name="language" class="lang-check" id="c" value="C">
+                            <label for="c">C</label>
+                            <input type="checkbox" name="language" class="lang-check" id="cpp" value="C++">
+                            <label for="cpp">C++</label>
+                            <input type="checkbox" name="language" class="lang-check" id="java" value="Java">
+                            <label for="java">Java</label>
+                            <input type="checkbox" name="language" class="lang-check" id="js" value="JavaScript">
+                            <label for="js">JavaScript</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="role">Preferred Role</label></td>
+                        <td><select name="role" id="role">
+                                <option value="default">Select a role</option>
+                                <option value="backend">Back-end Developer</option>
+                                <option value="frontend">Front-end Developer</option>
+                                <option value="app">App Developer</option>
+                                <option value="sysadmin">System admin</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" value="Reset" class="form-button"></td>
+                        <td><input type="button" value="Submit" class="form-button" id="submit-btn"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="image-div">
+            <img src="images/app.png" id="app" class="langspan" alt="app" height="200px" widht="200px">
+            <img src="images/backend.png" id="backend" class="langspan" alt="app" height="200px" widht="200px">
+            <img src="images/frontend.png" id="frontend" class="langspan" alt="app" height="200px" widht="200px">
+            <img src="images/sysadmin.png" id="sysadmin" class="langspan" alt="app" height="200px" widht="200px">
+        </div>
+    </div>
+</body>
+
+</html>
