@@ -1,0 +1,66 @@
+A51 MACRO ASSEMBLER  GLOWLED                                                              01/10/2021 16:28:18 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\glowLED.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE glowLED.asm SET(SMALL) DEBUG PRINT(.\Listings\glowLED.lst) OBJECT(.\Object
+                      s\glowLED.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Create pulse wave of 5ms  - 40% duty cycle using timers.
+                       2     
+                       3     ; ON Time - 2ms
+                       4     ; OFF Time - 3ms
+0000 758900            5     mov tmod, #00H
+0003                   6     back:
+0003 759055            7             mov p1, #55H
+0006 110F              8             acall onDelay
+0008 7590AA            9             mov p1, #0AAH
+000B 111F             10             acall offDelay
+000D 80F4             11             sjmp back
+000F                  12     onDelay:
+000F 758CC6           13             mov th0, #0C6H
+0012 758A0D           14             mov tl0, #0DH
+0015 D28C             15             setb tr0
+0017                  16     here1:
+0017 308DFD           17             jnb tf0, here1
+001A C28C             18             clr tr0
+001C C28D             19             clr tf0
+001E 22               20             ret
+001F                  21     offDelay:
+001F 758CA9           22             mov th0, #0A9H
+0022 758A13           23             mov tl0, #13H
+0025 D28C             24             setb tr0
+0027                  25     here2:
+0027 308DFD           26             jnb tf0, here2
+002A C28C             27             clr tr0
+002C C28D             28             clr tf0
+002E 22               29             ret
+                      30     end
+                                     
+A51 MACRO ASSEMBLER  GLOWLED                                                              01/10/2021 16:28:18 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0003H   A   
+HERE1. . . . . . .  C ADDR   0017H   A   
+HERE2. . . . . . .  C ADDR   0027H   A   
+OFFDELAY . . . . .  C ADDR   001FH   A   
+ONDELAY. . . . . .  C ADDR   000FH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  SQUAREWAVEWITHOUTTIMER                                               01/10/2021 16:44:08 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\squareWaveWithoutTimer.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE squareWaveWithoutTimer.asm SET(SMALL) DEBUG PRINT(.\Listings\squareWaveWit
+                      houtTimer.lst) OBJECT(.\Objects\squareWaveWithoutTimer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Square wave with 200ms delay without timers
+                       2     
+0000 759000            3     mov p1, #00H
+0003                   4     back:
+0003 B293              5             cpl p1.3
+0005 1109              6             acall delay
+0007 80FA              7             sjmp back
+                       8     
+0009                   9     delay:
+0009 7930             10             mov r1, #48
+000B                  11     here:
+000B D9FE             12             djnz r1, here
+000D 22               13             ret
+                      14     end
+A51 MACRO ASSEMBLER  SQUAREWAVEWITHOUTTIMER                                               01/10/2021 16:44:08 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0003H   A   
+DELAY. . . . . . .  C ADDR   0009H   A   
+HERE . . . . . . .  C ADDR   000BH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

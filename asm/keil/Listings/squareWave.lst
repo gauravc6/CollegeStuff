@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  SQUAREWAVE                                                           01/02/2021 12:09:47 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\squareWave.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE squareWave.asm SET(SMALL) DEBUG PRINT(.\Listings\squareWave.lst) OBJECT(.\
+                      Objects\squareWave.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 759000            1     mov p1, #00H
+0003                   2     back:
+0003 B293              3             cpl p1.3
+                       4             ;setb p1.3
+0005 1109              5             acall delay
+                       6             ;clr p1.3
+                       7             ;acall delay
+0007 80FA              8             sjmp back
+                       9     
+0009                  10     delay:
+0009 7930             11             mov r1, #48
+000B                  12             here:
+000B D9FE             13                     djnz r1, here
+000D 22               14                     ret
+                      15     end
+A51 MACRO ASSEMBLER  SQUAREWAVE                                                           01/02/2021 12:09:47 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0003H   A   
+DELAY. . . . . . .  C ADDR   0009H   A   
+HERE . . . . . . .  C ADDR   000BH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

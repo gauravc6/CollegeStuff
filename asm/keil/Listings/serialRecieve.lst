@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  SERIALRECIEVE                                                        02/15/2021 11:50:54 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\serialRecieve.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE serialRecieve.asm SET(SMALL) DEBUG PRINT(.\Listings\serialRecieve.lst) OBJ
+                      ECT(.\Objects\serialRecieve.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Recieve data using serial communication - baud rate 9600
+0000 758920            2     mov tmod, #20H
+0003 759850            3     mov scon, #50H
+0006 758DFD            4     mov th1, #0FDH
+0009 D28E              5     setb tr1
+000B                   6     read:
+000B 3098FD            7             jnb  ri, read
+000E E599              8             mov a, sbuf ; store in accumulator
+0010 F580              9             mov p0, a ; store in p0
+0012 C298             10             clr ri
+                      11     end 
+A51 MACRO ASSEMBLER  SERIALRECIEVE                                                        02/15/2021 11:50:54 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+P0 . . . . . . . .  D ADDR   0080H   A   
+READ . . . . . . .  C ADDR   000BH   A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

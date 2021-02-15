@@ -1,0 +1,29 @@
+A51 MACRO ASSEMBLER  SIMPLEADD                                                            01/17/2021 19:36:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\simpleAdd.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE simpleAdd.asm SET(SMALL) DEBUG PRINT(.\Listings\simpleAdd.lst) OBJECT(.\Ob
+                      jects\simpleAdd.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7421              1     mov a, #21H
+0002 75F020            2     mov b, #20H
+0005 25F0              3     add a, b
+                       4     end
+A51 MACRO ASSEMBLER  SIMPLEADD                                                            01/17/2021 19:36:38 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

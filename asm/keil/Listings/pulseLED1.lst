@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  PULSELED1                                                            01/17/2021 19:52:49 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\pulseLED1.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE pulseLED1.asm SET(SMALL) DEBUG PRINT(.\Listings\pulseLED1.lst) OBJECT(.\Ob
+                      jects\pulseLED1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Pulse LED at P1.3
+                       2     ; ON Timer - 100ms
+                       3     ; OFF Timer - 200ms
+0000 759000            4     mov p1, #00H
+0003                   5     back:
+0003 B293              6             cpl p1.3
+0005 1109              7             acall delay
+0007 80FA              8             sjmp back
+                       9     
+0009                  10     delay:
+0009 7930             11             mov r1, #48
+000B                  12     here1:
+000B D9FE             13             djnz r1, here1
+000D 22               14             ret
+                      15     end
+A51 MACRO ASSEMBLER  PULSELED1                                                            01/17/2021 19:52:49 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0003H   A   
+DELAY. . . . . . .  C ADDR   0009H   A   
+HERE1. . . . . . .  C ADDR   000BH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

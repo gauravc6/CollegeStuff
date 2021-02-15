@@ -1,0 +1,54 @@
+A51 MACRO ASSEMBLER  SERIAL2                                                              01/10/2021 19:44:29 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\serial2.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE serial2.asm SET(SMALL) DEBUG PRINT(.\Listings\serial2.lst) OBJECT(.\Object
+                      s\serial2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Display "VIT" using serial communication using baud rate 9600 - mode 1 and timer 1 mode 2
+0000 758920            2     mov tmod, #20H
+0003 758DFD            3     mov th1, #0FDH
+0006 759850            4     mov scon, #50H
+0009 D28E              5     setb tr1
+000B                   6     back:
+000B 7456              7             mov a, #'V'
+000D 1119              8             acall transfer
+000F 7449              9             mov a, #'I'
+0011 1119             10             acall transfer
+0013 7454             11             mov a, #'T'
+0015 1119             12             acall transfer
+0017 80F2             13             sjmp back
+                      14             
+0019                  15     transfer:
+0019 F599             16             mov sbuf, a
+001B                  17     here:
+001B 3099FD           18             jnb ti, here
+001E C299             19             clr ti
+0020 22               20             ret
+                      21     end
+A51 MACRO ASSEMBLER  SERIAL2                                                              01/10/2021 19:44:29 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   000BH   A   
+HERE . . . . . . .  C ADDR   001BH   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TRANSFER . . . . .  C ADDR   0019H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

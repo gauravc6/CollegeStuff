@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  SERIAL1                                                              01/17/2021 21:19:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\serial1.obj
+ASSEMBLER INVOKED BY: F:\Keil\C51\BIN\A51.EXE serial1.asm SET(SMALL) DEBUG PRINT(.\Listings\serial1.lst) OBJECT(.\Object
+                      s\serial1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Display "A" using serial commmunication mode 0
+                       2     
+0000 759800            3     mov scon, #00H
+0003                   4     back:
+0003 759941            5             mov sbuf, #"A"
+0006                   6     here:
+0006 3099FD            7             jnb ti, here
+0009 C299              8             clr ti
+000B 80F6              9             sjmp back
+                      10     end
+A51 MACRO ASSEMBLER  SERIAL1                                                              01/17/2021 21:19:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0003H   A   
+HERE . . . . . . .  C ADDR   0006H   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
